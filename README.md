@@ -103,7 +103,7 @@ You can customize the following settings in your configuration file:
 
 ## Requirements
 
-- Visual Studio Code (version 1.50.0 or later)
+- Visual Studio Code
 - Internet connection (for API access)
 
 ## Known Issues
