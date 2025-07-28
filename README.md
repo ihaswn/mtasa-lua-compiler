@@ -1,3 +1,5 @@
+![Icon](images/icon.png)
+
 # Lua to Luac Compiler!
 
 An extension that allows you to convert your MTA:SA source files (.lua) into Lua bytecode files (.luac) easily!
