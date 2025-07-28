@@ -1,0 +1,112 @@
+{
+	"name": "mtasa-lua-compiler",
+	"publisher": "ihaswn",
+	"displayName": "MTA:SA Lua Compiler (.luac)",
+	"description": "Compile your mta resource scripts to .luac and add a layer of security to your client-side scripts! this extension uses the MTA official lua compilation API",
+	"version": "0.0.1",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.102.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.compileToLuac",
+				"title": "Compile (.luac)"
+			},
+			{
+				"command": "extension.compileToLuacFromMeta",
+				"title": "Compile All Client Scripts (.luac)"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.compileToLuac",
+				"key": "ctrl+shift+b",
+				"when": "editorTextFocus && resourceExtname == '.lua'"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.compileToLuac",
+					"when": "resourceExtname == '.lua'",
+					"group": "navigation"
+				},
+				{
+					"command": "extension.compileToLuacFromMeta",
+					"when": "resourceExtname == '.xml'",
+					"group": "navigation"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "extension.compileToLuac",
+					"when": "resourceExtname == '.lua'",
+					"group": "navigation"
+				},
+				{
+					"command": "extension.compileToLuacFromMeta",
+					"when": "resourceExtname == '.xml'",
+					"group": "navigation"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "Lua Compiler Settings",
+			"properties": {
+				"mtasa_luac.obfuscate": {
+					"type": "string",
+					"enum": [
+						"0",
+						"1",
+						"2",
+						"3"
+					],
+					"default": "0",
+					"enumDescriptions": [
+						"No obfuscation",
+						"Some obfuscation",
+						"More obfuscation",
+						"Even more obfuscation"
+					],
+					"description": "Select the level of obfuscation to apply to your compiled Lua scripts."
+				},
+				"mtasa_luac.use_proxy": {
+					"type": "boolean",
+					"default": true,
+					"description": "Use machine proxy for Axios requests."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src",
+		"test": "vscode-test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.10",
+		"@types/node": "20.x",
+		"@types/vscode": "^1.102.0",
+		"@typescript-eslint/eslint-plugin": "^8.31.1",
+		"@typescript-eslint/parser": "^8.31.1",
+		"@vscode/test-cli": "^0.0.11",
+		"@vscode/test-electron": "^2.5.2",
+		"eslint": "^9.25.1",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"axios": "^1.11.0",
+		"xml2js": "^0.6.2"
+	}
+}

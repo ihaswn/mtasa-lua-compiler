@@ -1,0 +1,5 @@
+src/test/
+*.psd
+*.vsix
+out
+node_modules
