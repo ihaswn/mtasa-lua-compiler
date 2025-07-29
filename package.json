@@ -5,6 +5,10 @@
 	"description": "Compile your mta resource scripts to .luac and add a layer of security to your client-side scripts! this extension uses the MTA official lua compilation API",
 	"version": "0.0.1",
 	"icon": "images/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ihaswn/mtasa-lua-compiler"
+	},
 	"engines": {
 		"vscode": "^1.102.0"
 	},
