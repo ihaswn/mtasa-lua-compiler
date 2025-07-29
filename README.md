@@ -14,7 +14,7 @@ Client scripts are downloaded and executed on players’ computers, giving them 
 
 ## Disclaimer
 
-We do not store users resource source codes. When you compile your Lua scripts, the source code is uploaded directly to the official Multi Theft Auto (MTA) compiler website and downloaded back after processing. For more details, please refer to the MTA Lua Compilation API Wiki.
+We do not store users resource source codes. When you compile your Lua scripts, the source code is uploaded directly to the official Multi Theft Auto (MTA) compiler website and downloaded back after processing. For more details, please refer to the [MTA Lua Compilation API Wiki](https://wiki.multitheftauto.com/wiki/Lua_compilation_API).
 
 ---
 
@@ -22,7 +22,7 @@ We do not store users resource source codes. When you compile your Lua scripts, 
 
 Launch VS Code Quick Open (Ctrl+P), paste the following command and press enter.
 ```
-vscode:extension/ihaswn.mtasa-lua-compiler
+ext install ihaswn.mtasa-lua-compiler
 ```
 
 ---
