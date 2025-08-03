@@ -3,7 +3,7 @@
 	"publisher": "ihaswn",
 	"displayName": "MTA:SA Lua Compiler (.luac)",
 	"description": "Compile your mta resource scripts to .luac and add a layer of security to your client-side scripts! this extension uses the MTA official lua compilation API",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"icon": "images/icon.png",
 	"repository": {
 		"type": "git",
