@@ -28,6 +28,7 @@ ext install ihaswn.mtasa-lua-compiler
 ---
 
 ## Usage
+![image](images/preview.gif)
 
 ### Method 1: Compile Individual Lua Files
 1. Open a `.lua` file in the editor or select a `.lua` file in the Explorer.
